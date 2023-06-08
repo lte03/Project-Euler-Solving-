@@ -1,5 +1,5 @@
 def EKOK_to_N(n:int) -> int:
-    def Ebob(num1:int,num2:int):
+    def Ebob(num1:int,num2:int) -> int:
         while num1 % num2 != 0:
             temp = num2
             num2 = num1 % num2
