@@ -2,7 +2,7 @@ from math import sqrt
 
 def find_nth_prime(number:int) -> int:
     def is_prime(num:int) -> bool:
-        if num == 0 or num == 1:
+        if num < 2:
             return False
         for i in range(2,int(sqrt(num)) + 1):
             if num % i == 0:
