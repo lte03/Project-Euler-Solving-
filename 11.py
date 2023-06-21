@@ -28,8 +28,8 @@ for i in range(len(number)):
         number[i][j] = int(number[i][j])
 print(number)
 
-def calc_max_product_two_d_array(array:list):
-    def max_row_product():
+def calc_max_product_two_d_array(array:list) -> int:
+    def max_row_product() -> int:
         row_products = []
         for i in range(len(array)):
             for j in range(len(array[0]) - 3):
@@ -39,7 +39,7 @@ def calc_max_product_two_d_array(array:list):
                 row_products.append(product)
         return max(row_products)
     
-    def max_column_product():
+    def max_column_product() -> int:
         column_products = []
         for i in range(len(array) - 3):
             for j in range(len(array[0])):
@@ -49,7 +49,7 @@ def calc_max_product_two_d_array(array:list):
                 column_products.append(product)
         return max(column_products)
 
-    def max_diagonal_product():
+    def max_diagonal_product() -> int:
         diagonal_products = []
         for i in range(len(array) - 3):
             for j in range(len(array[0]) - 3):
@@ -59,7 +59,7 @@ def calc_max_product_two_d_array(array:list):
                 diagonal_products.append(product)
         return max(diagonal_products)
     
-    def max_anti_diagonal_product():
+    def max_anti_diagonal_product() -> int:
         anti_diagonal_products = []
         for i in range(len(array) - 3):
             for j in range(3, len(array[0])):
